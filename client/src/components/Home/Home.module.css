@@ -17,10 +17,9 @@
 }
 
 .titulo{
-    color: #b5179e;
-}
-.titulo:hover {
-    background: #88d491;
+    color: #0f0f0f;
+    width: 100%;
+    font-size: 50px;
 }
 
 .card {

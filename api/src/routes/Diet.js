@@ -59,35 +59,4 @@ router.post('/recipes', async (req,res) => {
     }
 });
 
-// router.put('/recipes/:id', async (req,res) => {
-//     try{
-//         const {id}= req.params;
-//         const {title}=req.body;
-//         await Recipe.update(
-//             {title}, 
-//             {where:{
-//                 id
-//             }}
-//         )
-//         res.status(200).send('Recipe modified')
-//     } catch{
-//         res.status(400).send('Not found');
-//     }
-// })
-
-// router.delete('/recipes/:id', async (req,res) => {
-//     try {
-//         const {id}= req.params;
-//         await Recipe.destroy(
-//             {where:{
-//                 id
-//             }}
-//             )
-//             res.status(200).send('Recipe delete')
-//     } catch{
-//         res.status(400).send('Not found');
-//     }
-// })
-
-
 module.exports= router;

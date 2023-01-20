@@ -21,9 +21,13 @@ router.get('/recipes', async (req,res) => {
                 }
             })
             const allTitle= recipeTitle.concat(nameRecipe)
-
-            allTitle? res.status(200).send(allTitle) : res.status(404).json("Error");
-        }else{
+            const recipeTi= await getInfoDB();
+                const name= recipeTi?.filter(
+                (p) => p.title.toUpperCase() === title.toUpperCase()
+                ); 
+                const allTit= allTitle.concat(name)
+            allTit? res.status(200).send(allTit) : res.status(404).json("Error");
+        } else {
             const allRecipe= await getInfoDB();
             res.status(200).json(allRecipe)
         }
@@ -34,15 +38,6 @@ router.get('/recipes', async (req,res) => {
 
 
 router.get('/recipes/:id',async (req,res) => {
-    // const id = req.params.id.toUpperCase(); 
-    //     const recipesTotal = await getInfoDB();
-    // if(id){
-    //     let recipesId= await recipesTotal.filter( e => e.id==id)
-    //     recipesId.length? 
-    //      res.status(200).send(recipesId) : 
-    //      res.status(404).send('Invalid recipe')
-        
-    // } try{
         {
             try{
                 const{id}=req.params;
@@ -52,6 +47,6 @@ router.get('/recipes/:id',async (req,res) => {
                 res.status(400).json(error.message)
             }
         }
-     } );
+    } );
 
 module.exports= router;

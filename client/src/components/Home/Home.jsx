@@ -22,7 +22,6 @@ export default function Home() {
     
     let [currentPage, setCurrentPage] = useState(1);
     let [recipePerPage, setRecipePerPage] = useState(9);
-    if(currentPage === 1) recipePerPage = 9;
     const indexOfLastRecipe = currentPage * recipePerPage;
     const indexOfFirstRecipe = indexOfLastRecipe - recipePerPage;
     const currentRecipe = allRecipe.slice(indexOfFirstRecipe, indexOfLastRecipe);
@@ -73,12 +72,10 @@ export default function Home() {
     return (
         <div>
             <img className={f.img} src={imge2} alt='im3.jpg'/>
-        <h1>FOOD</h1>
+        <h1 className={f.titulo}>FOOD</h1>
         <button onClick={e=>{handleClick(e)}}>
             Reload all Recipes
-        </button>
-
-
+        </button>        
 
         <div className={f.filtros}>
         <hr/>
