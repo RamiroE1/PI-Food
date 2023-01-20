@@ -1,0 +1,36 @@
+.img {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    object-fit: center;
+}
+
+.filtros {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #181617;
+}
+
+.titulo{
+    color: #b5179e;
+}
+.titulo:hover {
+    background: #88d491;
+}
+
+.card {
+    display:grid;
+    grid-template-columns: repeat(3, 8fr);
+    align-content: center;
+    align-items:center;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 0px;
+}
+

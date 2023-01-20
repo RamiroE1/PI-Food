@@ -1,0 +1,12 @@
+export const GET_RECIPE = "GET_RECIPE",
+               GET_DIET = "GET_DIET",
+        GET_TITLE_RECIPE = "GET_TITLE_RECIPE",
+          GET_ID_RECIPE = "GET_ID_RECIPE",
+            POST_RECIPE = "POST_RECIPE",
+      FILTER_BY_RECIPE = "FILTER_BY_RECIPE",
+       FILTER_BY_DIET = "FILTER_BY_DIET",
+      ORDER_BY_HEALTHSCORE = "ORDER_BY_HEALTHSCORE",
+                      SORT = "SORT",
+                    DETAIL = "DETAIL",
+         DELETE_RECIPE = "DELETE_RECIPE",
+                     CLEAN = "CLEAN";
